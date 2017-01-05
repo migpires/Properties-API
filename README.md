@@ -44,9 +44,9 @@ To configure database rename the file `.env.example` in the root directory to `.
 
 Parameters:
 
-*name
-*email
-*password
+* name
+* email
+* password
 
 	
 ###Login
@@ -55,8 +55,8 @@ Parameters:
 		
 Parameters:
 
-*email
-*password
+* email
+* password
 
 Note: This request will return a token.
 
@@ -82,7 +82,7 @@ Note: This request will return a token.
 		
 Parameters: 
 
-*api_token
+* api_token
 
 
 ## Map
