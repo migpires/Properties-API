@@ -1,94 +1,93 @@
 # Properties API
 
 
-	This repository holds an API built with Laravel for demonstration purposes. This API return all responses in JSON objects. It allows to create new users to whom will be associated 3 new properties which can be viewed and managed. See **Requests** to know more.
+This repository holds an API built with Laravel for demonstration purposes. This API return all responses in JSON objects. It allows to create new users to whom will be associated 3 new properties which can be viewed and managed. See **Requests** to know more.
 
 
 
 ## Install & Run
 
 	
-	Open the application directory in console and run the following commands:
+Open the application directory in console and run the following commands:
 
 
-	###Migrations
+###Migrations
 
-		```
-		php artisan migrate
-		```
+```
+php artisan migrate
+```
 
 
-	###Seeds
+###Seeds
 
-		```
-		php artisan db:seed --class=AddUsersProperties
-		```
+```
+php artisan db:seed --class=AddUsersProperties
+```
 
-	###Run
+###Run
 
-		```
-		php artisan serve
-		```
+```
+php artisan serve
+```
 
 ## Database
 
-	To configure database rename the file `.env.example` in the root directory to `.env`, then add your database parameters on this file.
+To configure database rename the file `.env.example` in the root directory to `.env`, then add your database parameters on this file.
 
 
 ## Requests
 
 
-	###Create User
+###Create User
 
-		**POST** `"YOUR ROOT"/api/createuser`
+**POST** `"YOUR ROOT"/api/createuser`
 
-		Parameters:
+Parameters:
 
-		*name
-		*email
-		*password
+*name
+*email
+*password
 
 	
-	###Login
+###Login
 	
-		**POST** `"YOUR ROOT"/api/login`
+**POST** `"YOUR ROOT"/api/login`
 		
-		Parameters:
+Parameters:
 
-		*email
-		*password
+*email
+*password
 
-		Note: This request will return a token.
+Note: This request will return a token.
 
 	
-	###All Properties
+###All Properties
 
-		**GET** `"YOUR ROOT"/api/properties/`
+**GET** `"YOUR ROOT"/api/properties/`
 		
 	
-	###Properties by User ID
+###Properties by User ID
 
-		**GET** `"YOUR ROOT"/api/properties/{id}`
-
-
-	###Properties by Radius
-
-		**GET** `"YOUR ROOT"/api/properties/{latitude}/{longitude}/{radius}/{unit?}`
+**GET** `"YOUR ROOT"/api/properties/{id}`
 
 
-	###Update Property
+###Properties by Radius
 
-		**POST** `"YOUR ROOT"/api/properties/update/{id}/{field}/{value}`
+**GET** `"YOUR ROOT"/api/properties/{latitude}/{longitude}/{radius}/{unit?}`
+
+
+###Update Property
+
+**POST** `"YOUR ROOT"/api/properties/update/{id}/{field}/{value}`
 		
-		Parameters: 
+Parameters: 
 
-		*api_token
+*api_token
 
 
 ## Map
 
 
-	To switch Properties requests between returning a map or a JSON object, the attribute's `$setMap` value in **PropertiesController**
-	has to be changed to `true` or `false`.
+To switch Properties requests between returning a map or a JSON object, the attribute's `$setMap` value in **PropertiesController** has to be changed to `true` or `false`.
 
 	
