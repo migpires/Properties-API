@@ -1,11 +1,11 @@
-# Properties API
+#Properties API
 
 
 This repository holds an API built with Laravel for demonstration purposes. This API return all responses in JSON objects. It allows to create new users to whom will be associated 3 new properties which can be viewed and managed. See **Requests** to know more.
 
 
 
-## Install & Run
+##Install & Run
 
 	
 Open the application directory in console and run the following commands:
@@ -30,7 +30,7 @@ php artisan db:seed --class=AddUsersProperties
 php artisan serve
 ```
 
-## Database
+##Database
 
 To configure database rename the file `.env.example` in the root directory to `.env`, then add your database parameters on this file.
 
@@ -85,9 +85,13 @@ Parameters:
 * api_token
 
 
-## Map
+##Map
 
 
 To switch Properties requests between returning a map or a JSON object, the attribute's `$setMap` value in **PropertiesController** has to be changed to `true` or `false`.
 
-	
+
+##Under Development
+
+* Add Tests
+* Re-factor code
